@@ -18,7 +18,7 @@ export class Equipo extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   Descripcion: string;
 
@@ -31,56 +31,56 @@ export class Equipo extends Entity {
   @property({
     type: 'array',
     itemType: 'string',
-    required: true,
+    required: false,
   })
   PaisEquipo: string[];
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   Altura: number;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   Anchura: number;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   Profundidad: number;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   PesoVolumetrico: number;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   PesoReal: number;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   PesoFacturado: number;
 
   @property({
     type: 'array',
     itemType: 'string',
-    required: true,
+    required: false,
   })
   PosArancelaria: string[];
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   Proveedor: string;
 
@@ -92,14 +92,14 @@ export class Equipo extends Entity {
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   GastosSIA: number;
 
   @property({
     type: 'array',
     itemType: 'string',
-    required: true,
+    required: false,
   })
   PaisProveedor: string[];
 

@@ -1,3 +1,4 @@
+import { authenticate } from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -110,7 +111,7 @@ export class CotizacionController {
   ): Promise<Cotizacion> {
     return this.cotizacionRepository.findById(id, filter);
   }
-
+  @authenticate("admin")
   @patch('/Cotizaciones/{id}')
   @response(204, {
     description: 'Cotizacion PATCH success',
@@ -139,7 +140,7 @@ export class CotizacionController {
   ): Promise<void> {
     await this.cotizacionRepository.replaceById(id, cotizacion);
   }
-
+  @authenticate("admin")
   @del('/Cotizaciones/{id}')
   @response(204, {
     description: 'Cotizacion DELETE success',
